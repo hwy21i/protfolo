@@ -54,6 +54,7 @@ export const DEVELOPER_PROFILE = {
   email: "hawariyayohannes52@gmail.com",
   phone: "0900053956",
   github: "https://github.com/hwy21i",
+  avatar: "/github-profile.png",
   linkedin: "https://www.linkedin.com/in/hawariya-yohannes-364649430",
   metrics: [
     { label: "Verified Production Projects", value: "4" },
@@ -104,7 +105,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     whatILearned:
       "Advanced full-stack system architecture, session cookie security, complex aggregate database queries, and building production-grade enterprise software systems.",
     liveUrl: "https://apex-develoment.vercel.app/",
-    githubUrl: "https://github.com/hwy21i/Apex-development",
+    githubUrl: "https://github.com/hwy21i/Apex-develoment",
     isFlagship: true,
     image: "/construction-site.jpg",
     secondaryImage: "/architecture-facade.jpg",

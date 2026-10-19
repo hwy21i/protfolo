@@ -1,6 +1,7 @@
 "use client";
 
 import React, { memo } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles } from "lucide-react";
 import { DEVELOPER_PROFILE } from "@/data/portfolio-data";
@@ -45,39 +46,44 @@ const ProfileDisplay = memo(() => (
   >
     <div className="relative group">
       {/* Optimized Multi-Layered Glowing Aura Rings from Reference */}
-      <div className="absolute -inset-6 opacity-40 group-hover:opacity-65 transition-opacity duration-700 pointer-events-none">
+      <div className="absolute -inset-6 opacity-40 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-midnight-blue)] via-[var(--color-steel-blue)] to-[var(--color-soft-ice-blue)] rounded-full blur-2xl animate-spin-slower" />
         <div className="absolute inset-0 bg-gradient-to-l from-[var(--color-steel-blue)] via-[var(--color-midnight-blue)] to-[var(--color-deep-navy)] rounded-full blur-2xl animate-pulse-slow opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-steel-blue)] via-[var(--color-soft-ice-blue)] to-[var(--color-midnight-blue)] rounded-full blur-2xl animate-float opacity-50" />
       </div>
 
       <div className="relative">
-        <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(74,127,167,0.3)] transform transition-all duration-700 group-hover:scale-105 bg-[var(--color-deep-navy)] border-4 border-[var(--border-subtle)] group-hover:border-[var(--color-soft-ice-blue)]/50 relative flex items-center justify-center">
+        <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(74,127,167,0.35)] transform transition-all duration-700 group-hover:scale-105 bg-[var(--color-deep-navy)] border-4 border-[var(--border-subtle)] group-hover:border-[var(--color-soft-ice-blue)]/60 relative">
           
-          {/* Subtle Grid Pattern Overlay Inside Avatar Frame */}
-          <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
+          {/* Subtle Outer Border Ring Matching EkiZR */}
+          <div className="absolute inset-0 border-4 border-white/10 rounded-full z-20 transition-all duration-700 group-hover:border-white/30 group-hover:scale-105 pointer-events-none" />
 
-          {/* Stylized Monogram and Tech Core Graphic */}
-          <div className="relative z-10 flex flex-col items-center justify-center text-center p-6 select-none">
-            <div className="w-24 h-24 rounded-full bg-[var(--color-midnight-blue)] border-2 border-[var(--color-steel-blue)] flex items-center justify-center shadow-inner mb-3 group-hover:scale-110 transition-transform duration-500">
-              <span className="font-heading font-extrabold text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-cloud-white)] to-[var(--color-soft-ice-blue)]">
-                HY
-              </span>
-            </div>
-            <div className="font-mono text-xs text-[var(--color-soft-ice-blue)] tracking-widest uppercase mb-1">
-              Unity University · CS
-            </div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-midnight-blue)]/80 border border-[var(--border-subtle)] text-[11px] font-mono text-[var(--text-secondary)]">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Full-Stack Architect
-            </div>
-          </div>
+          {/* Optimized Ambient Lighting Overlays from Reference */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50 z-10 transition-opacity duration-700 group-hover:opacity-0 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-midnight-blue)]/50 via-transparent to-[var(--color-steel-blue)]/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+          {/* Verified GitHub Profile Picture */}
+          <Image
+            src={DEVELOPER_PROFILE.avatar || "/github-profile.png"}
+            alt={`${DEVELOPER_PROFILE.name} - GitHub Profile Picture`}
+            fill
+            sizes="(max-width: 768px) 288px, 320px"
+            priority
+            className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+          />
 
           {/* Desktop Hover Sheen Reflection (Exact Reference Recreation) */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-20 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[var(--color-cloud-white)]/15 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-[var(--color-soft-ice-blue)]/15 to-transparent transform translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-[var(--color-cloud-white)]/25 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-[var(--color-soft-ice-blue)]/20 to-transparent transform translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
+            <div className="absolute inset-0 rounded-full border-8 border-white/10 scale-0 group-hover:scale-100 transition-transform duration-700 animate-pulse-slow" />
           </div>
+        </div>
+
+        {/* Floating Identification Pill */}
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-30 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[var(--color-deep-navy)]/90 backdrop-blur-md border border-[var(--color-steel-blue)]/40 text-[11px] font-mono text-[var(--color-cloud-white)] shadow-lg whitespace-nowrap">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Unity University · CS</span>
         </div>
       </div>
     </div>

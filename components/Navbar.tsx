@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Sun, Moon, ArrowUpRight } from "lucide-react";
+import { DEVELOPER_PROFILE } from "@/data/portfolio-data";
 
 const NAV_LINKS = [
   { href: "#hero", label: "Home" },
@@ -97,8 +99,14 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, "#hero")}
               className="flex items-center gap-2.5 group"
             >
-              <div className="w-8 h-8 rounded-full bg-[var(--color-midnight-blue)] border border-[var(--border-subtle)] flex items-center justify-center text-[var(--color-cloud-white)] font-heading font-bold text-xs tracking-wider transition-transform duration-300 group-hover:scale-105 group-hover:border-[var(--color-steel-blue)]">
-                HY
+              <div className="w-8 h-8 rounded-full overflow-hidden bg-[var(--color-midnight-blue)] border border-[var(--border-subtle)] flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:border-[var(--color-steel-blue)] relative">
+                <Image
+                  src={DEVELOPER_PROFILE.avatar || "/github-profile.png"}
+                  alt={DEVELOPER_PROFILE.name}
+                  fill
+                  sizes="32px"
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-semibold text-sm sm:text-base tracking-tight text-[var(--text-primary)] group-hover:text-[var(--color-soft-ice-blue)] transition-colors">
