@@ -103,7 +103,7 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
       "Designing a unified permission matrix where project managers, site engineers, and financial auditors each have tailored, secure views without compromising data integrity.",
     whatILearned:
       "Advanced full-stack system architecture, session cookie security, complex aggregate database queries, and building production-grade enterprise software systems.",
-    liveUrl: "https://construction-project-management.vercel.app/",
+    liveUrl: "https://apex-development.vercel.app/",
     githubUrl: "https://github.com/hwy21i/Apex-develoment",
     isFlagship: true,
     image: "/construction-site.jpg",
